@@ -140,7 +140,7 @@ img:hover {
     overflow: hidden;
 }
 .navbar {
-    min-height: 48px !important;
+    min-height: 40px !important;
     margin: 0;
     margin-left: -15px;
     margin-right: 5px;
@@ -151,13 +151,18 @@ img:hover {
     border: none;
 }
 .main-navigation .navbar-nav > li > a {
-    color: #d0d0d0;
+    /* color: #d0d0d0;
     font-size: 14px;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     border-right: 1px solid #000;
-    padding: 15px;
+    padding: 15px; */
+    padding: 6px 8px 8px 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    border-top: 4px solid #ffffff00;
 }
 .home .main-navigation .navbar-nav > .active > a {
     background: 0 0;
@@ -168,13 +173,14 @@ img:hover {
 .main-navigation .navbar-nav > li > a:hover,
 .main-navigation .navbar-nav > li > a:focus {
     color: #fdfdfd;
-    background: #000;
+    background: #0000;
+    border-top-color: #fdfdfd;
 }
 .main-navigation .navbar-nav > .active > a,
 .main-navigation .navbar-nav > .active > a:hover,
 .main-navigation .navbar-nav > .active > a:focus {
     color: #fff;
-    background: #234;
+    background: #2340;
     border: none;
 }
 .main-navigation .navbar-nav > li.current_page_item:first-child a {
@@ -224,7 +230,7 @@ img:hover {
 }
 .section-heading {
     padding: 0 6px 0 0;
-    margin: 21px 0 15px;
+    margin: 5px 0 15px;
     font-size: 16px;
     line-height: 20px;
     position: relative;
@@ -5561,4 +5567,50 @@ ul.list-info-group {
     #footer .footer-logo {
         padding: 15px 0;
     }
+}
+
+/* css sidebar */
+
+.news-block-head {
+    display: inline-block;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    color: #fff;
+    background-color: #005eb5;
+    /* background-image: url(../../File/bk_blue.png); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-left: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.news-block-other {
+    /* padding: 10px; */
+    padding-top: 0;
+    border: 1px solid #ddd;
+    /* border-top: 3px solid #005EB5; */
+    background: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+.news-block-body {
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+.carousel {
+    position: relative;
+}
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.news-block-body .item {
+    padding-right: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: justify;
 }

@@ -29,6 +29,7 @@
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="55" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel='dns-prefetch' href='//s.w.org' />
 
@@ -74,8 +75,9 @@
     <div class="container">
         <div class="">
             <!-- <div class="container"> -->
-            <nav class="navbar halim-navbar main-navigation" role="navigation" data-dropdown-hover="1">
-                <div class="navbar-header">
+            <nav class="navbar halim-navbar main-navigation" role="navigation" data-dropdown-hover="1"
+                style="text-transform: uppercase;">
+                <!-- <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse"
                         data-target="#halim" aria-expanded="false">
                         <span class="sr-only">Menu</span>
@@ -95,16 +97,21 @@
                         <a href="javascript:;" id="expand-ajax-filter" style="color: #ffed4d;">Lọc <i
                                 class="fas fa-filter"></i></a>
                     </button>
-                </div>
+                </div> -->
                 <div class="collapse navbar-collapse" id="halim">
                     <div class="menu-menu_1-container">
                         <ul id="menu-menu_1" class="nav navbar-nav navbar-left">
-                            <li class="current-menu-item active"><a title="Trang Chủ" href="index.php">Trang Chủ</a>
+                            <li class="current-menu-item active">
+
+                                <a title="Trang Chủ" href="index.php">
+                                    <ion-icon name="home-outline"
+                                        style="font-size: 20px;font-weight: 600;padding-top: 2px;"></ion-icon>
+                                </a>
                             </li>
-                            <li class="mega"><a title="Phim Mới" href="danhmuc.php">Phim Mới</a></li>
+                            <li class="mega"><a title="Giới thiệu" href="">Giới thiệu</a></li>
                             <li class="mega dropdown">
-                                <a title="Năm" href="#" data-toggle="dropdown" class="dropdown-toggle"
-                                    aria-haspopup="true">Năm <span class="caret"></span></a>
+                                <a title="Tin tức" href="#" data-toggle="dropdown" class="dropdown-toggle"
+                                    aria-haspopup="true">Tin tức<span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
                                     <li><a title="Phim 2020" href="danhmuc.php">Phim 2020</a></li>
                                     <li><a title="Năm 2019" href="danhmuc.php">Năm 2019</a></li>
@@ -112,8 +119,8 @@
                                 </ul>
                             </li>
                             <li class="mega dropdown">
-                                <a title="Thể Loại" href="#" data-toggle="dropdown" class="dropdown-toggle"
-                                    aria-haspopup="true">Thể Loại <span class="caret"></span></a>
+                                <a title="Đầu tư - phát triển" href="#" data-toggle="dropdown" class="dropdown-toggle"
+                                    aria-haspopup="true">Đầu tư - phát triển<span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
                                     <li><a title="Tâm Lý" href="danhmuc.php">Tâm Lý</a></li>
                                     <li><a title="Hành động" href="">Hành động</a></li>
@@ -136,8 +143,8 @@
                                 </ul>
                             </li>
                             <li class="mega dropdown">
-                                <a title="Quốc Gia" href="#" data-toggle="dropdown" class="dropdown-toggle"
-                                    aria-haspopup="true">Quốc Gia <span class="caret"></span></a>
+                                <a title="Thông tin cần biết" href="#" data-toggle="dropdown" class="dropdown-toggle"
+                                    aria-haspopup="true">Thông tin cần biết<span class="caret"></span></a>
                                 <ul role="menu" class=" dropdown-menu">
                                     <li><a title="Việt nam" href="danhmuc.php">Việt nam</a></li>
                                     <li><a title="Ấn Độ" href="danhmuc.php">Ấn Độ</a></li>
@@ -151,16 +158,22 @@
                                     <li><a title="Philippin" href="danhmuc.php">Philippin</a></li>
                                 </ul>
                             </li>
-                            <li><a title="Phim Lẻ" href="danhmuc.php">Phim Lẻ</a></li>
-                            <li><a title="Phim Bộ" href="danhmuc.php">Phim Bộ</a></li>
-                            <li><a title="Phim Chiếu Rạp" href="danhmuc.php">Phim Chiếu Rạp</a></li>
+                            <li><a title="Địa điểm" href="danhmuc.php">Địa điểm</a></li>
+                            <li><a title="Dịch vụ công" href="danhmuc.php">Dịch vụ công</a></li>
+                            <li><a title="Hỏi đáp" href="danhmuc.php">Hỏi đáp</a></li>
+                            <li class="current-menu-item active">
+
+                                <a title="loginAdmin" href="{{ route('login') }}">
+                                    <ion-icon name="person-outline"
+                                        style="font-size: 20px;font-weight: 600;padding-top: 2px;"></ion-icon>
+                                </a>
+                            </li>
                         </ul>
                     </div>
-                    <ul class="nav navbar-nav navbar-left" style="background:#000;">
-                        <li><a href="#" onclick="locphim()" style="color: #ffed4d;">Lọc Phim</a></li>
-                    </ul>
+
                 </div>
             </nav>
+
             <div class="collapse navbar-collapse" id="search-form">
                 <div id="mobile-search-form" class="halim-search-form"></div>
             </div>
@@ -175,136 +188,15 @@
         <div class="row fullwith-slider"></div>
     </div>
     <div class="container">
+
         <div class="row container" id="wrapper">
-            <div class="halim-panel-filter">
-                <div id="ajax-filter" class="panel-collapse collapse" aria-expanded="true" role="menu">
-                    <div class="ajax"></div>
-                </div>
-            </div>
-            <div class="col-xs-12 carausel-sliderWidget">
-                <section id="halim-advanced-widget-4">
-                    <div class="section-heading">
-                        <a href="danhmuc.php" title="Phim Chiếu Rạp">
-                            <span class="h-text">Phim Chiếu Rạp</span>
-                        </a>
-                        <ul class="heading-nav pull-right hidden-xs">
-                            <li class="section-btn halim_ajax_get_post" data-catid="4" data-showpost="12"
-                                data-widgetid="halim-advanced-widget-4" data-layout="6col"><span
-                                    data-text="Chiếu Rạp"></span></li>
-                        </ul>
-                    </div>
-                    <div id="halim-advanced-widget-4-ajax-box" class="halim_box">
-                        <article class="col-md-2 col-sm-4 col-xs-6 thumb grid-item post-38424">
-                            <div class="halim-item">
-                                <a class="halim-thumb" href="chitiet.php" title="GÓA PHỤ ĐEN">
-                                    <figure><img class="lazy img-responsive"
-                                            src="https://lumiere-a.akamaihd.net/v1/images/p_blackwidow_disneyplus_21043-1_63f71aa0.jpeg"
-                                            alt="GÓA PHỤ ĐEN" title="GÓA PHỤ ĐEN"></figure>
-                                    <span class="status">HD</span><span class="episode"><i class="fa fa-play"
-                                            aria-hidden="true"></i>Vietsub</span>
-                                    <div class="icon_overlay"></div>
-                                    <div class="halim-post-title-box">
-                                        <div class="halim-post-title ">
-                                            <p class="entry-title">GÓA PHỤ ĐEN</p>
-                                            <p class="original_title">Black Widow</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                <div class="clearfix"></div>
-            </div>
-            <main id="main-contents" class="col-xs-12 col-sm-12 col-md-8">
-                <section id="halim-advanced-widget-2">
-                    <div class="section-heading">
-                        <a href="danhmuc.php" title="Phim Bộ">
-                            <span class="h-text">Phim Bộ</span>
-                        </a>
-                    </div>
-                    <div id="halim-advanced-widget-2-ajax-box" class="halim_box">
-                        <article class="col-md-3 col-sm-3 col-xs-6 thumb grid-item post-37606">
-                            <div class="halim-item">
-                                <a class="halim-thumb" href="chitiet.php">
-                                    <figure><img class="lazy img-responsive"
-                                            src="https://image.bongngocdn.com/upload/poster-loki-marvel-2021.jpg"
-                                            alt="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"
-                                            title="BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO"></figure>
-                                    <span class="status">TẬP 15</span><span class="episode"><i class="fa fa-play"
-                                            aria-hidden="true"></i>Vietsub</span>
-                                    <div class="icon_overlay"></div>
-                                    <div class="halim-post-title-box">
-                                        <div class="halim-post-title ">
-                                            <p class="entry-title">BẠN CÙNG PHÒNG CỦA TÔI LÀ GUMIHO</p>
-                                            <p class="original_title">My Roommate Is a Gumiho</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </article>
 
+            @include('layouts.Content.DayTime.daytime')
+            <!-- main -->
+            @include('layouts.Content.DayTime.main')
+            <!-- sidebar -->
+            @include('layouts.Content.DayTime.sidebar')
 
-                    </div>
-                </section>
-                <div class="clearfix"></div>
-            </main>
-            <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-4">
-                <div id="halim_tab_popular_videos-widget-7" class="widget halim_tab_popular_videos-widget">
-                    <div class="section-bar clearfix">
-                        <div class="section-title">
-                            <span>Top Views</span>
-                            <ul class="halim-popular-tab" role="tablist">
-                                <li role="presentation" class="active">
-                                    <a class="ajax-tab" role="tab" data-toggle="tab" data-showpost="10"
-                                        data-type="today">Day</a>
-                                </li>
-                                <li role="presentation">
-                                    <a class="ajax-tab" role="tab" data-toggle="tab" data-showpost="10"
-                                        data-type="week">Week</a>
-                                </li>
-                                <li role="presentation">
-                                    <a class="ajax-tab" role="tab" data-toggle="tab" data-showpost="10"
-                                        data-type="month">Month</a>
-                                </li>
-                                <li role="presentation">
-                                    <a class="ajax-tab" role="tab" data-toggle="tab" data-showpost="10"
-                                        data-type="all">All</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <section class="tab-content">
-                        <div role="tabpanel" class="tab-pane active halim-ajax-popular-post">
-                            <div class="halim-ajax-popular-post-loading hidden"></div>
-                            <div id="halim-ajax-popular-post" class="popular-post">
-                                <div class="item post-37176">
-                                    <a href="chitiet.php" title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ">
-                                        <div class="item-link">
-                                            <img src="https://ghienphim.org/uploads/GPax0JpZbqvIVyfkmDwhRCKATNtLloFQ.jpeg?v=1624801798"
-                                                class="lazy post-thumb" alt="CHỊ MƯỜI BA: BA NGÀY SINH TỬ"
-                                                title="CHỊ MƯỜI BA: BA NGÀY SINH TỬ" />
-                                            <span class="is_trailer">Trailer</span>
-                                        </div>
-                                        <p class="title">CHỊ MƯỜI BA: BA NGÀY SINH TỬ</p>
-                                    </a>
-                                    <div class="viewsCount" style="color: #9d9d9d;">3.2K lượt xem</div>
-                                    <div style="float: left;">
-                                        <span class="user-rate-image post-large-rate stars-large-vang"
-                                            style="display: block;/* width: 100%; */">
-                                            <span style="width: 0%"></span>
-                                        </span>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </section>
-                    <div class="clearfix"></div>
-                </div>
-            </aside>
         </div>
         <footer id="footer" class="clearfix">
             <div class="container footer-columns">
@@ -344,6 +236,9 @@
     <script type='text/javascript' src='js/owl.carousel.min.js?ver=5.7.2' id='carousel-js'></script>
 
     <script type='text/javascript' src='js/halimtheme-core.min.js?ver=1626273138' id='halim-init-js'></script>
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 

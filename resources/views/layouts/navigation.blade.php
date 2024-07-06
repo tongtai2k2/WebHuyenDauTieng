@@ -1,4 +1,4 @@
-<div class="navigation">
+<div class="navigation active">
     <ul>
         <li>
             <a href="#" style="margin-top: 10px;">
@@ -25,11 +25,11 @@
         </li>
 
         <li>
-            <a href="#">
+            <a href="{{route('danhmuc.index')}}">
                 <span class="icon">
-                    <ion-icon name="people-outline"></ion-icon>
+                    <ion-icon name="layers-outline"></ion-icon>
                 </span>
-                <span class="title">Customers</span>
+                <span class="title">Danh mục</span>
             </a>
         </li>
 

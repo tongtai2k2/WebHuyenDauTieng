@@ -19,18 +19,18 @@ body {
     width: 100%;
     max-width: 400px;
     padding: 30px 40px;
-    background: transparent;
+    background: #bdbdbd8a;
     border: 2px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 355);
+    box-shadow: 0 0 10px rgb(73 72 72 / 95%);
 }
 
 .wrapper h1 {
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #2e8b57;
     text-align: center;
 }
 

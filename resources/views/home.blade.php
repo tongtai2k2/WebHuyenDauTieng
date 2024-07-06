@@ -73,7 +73,7 @@
     @include('layouts.navigation')
 
     <!-- ========================= Main ==================== -->
-    <div class="main">
+    <div class="main active">
         @include('layouts.topbar')
         <!-- Nội dung thay đổi từ đây đi xuống ContentAdmin-->
         <!--  ======================= Cards ==================  -->
@@ -122,10 +122,10 @@
                 </div>
             </div>
         </div> -->
-
+        @yield('contentadmin')
         <!-- ================ Order Details List ================= -->
-        <!-- <div class="details"> -->
-        <!-- <div class="recentOrders">
+        <!-- <div class="details">
+            <div class="recentOrders">
                 <div class="cardHeader">
                     <h2>Recent Orders</h2>
                     <a href="#" class="btn">View All</a>
@@ -280,8 +280,8 @@
                         </td>
                     </tr>
                 </table>
-            </div> -->
-        <!-- </div> -->
+            </div>
+        </div> -->
     </div>
 </div>
 
